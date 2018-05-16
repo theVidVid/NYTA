@@ -62,12 +62,8 @@
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <button class="btn btn-sm btn-warning"><a href='1/edit'>Edit</a></button>
-                <button class="btn btn-sm btn-danger">Delete</button>
+                <button class="btn btn-sm btn-danger"><%= link_to 'Delete', instructor_path(@instructor), remote: true, method: :delete %></button>
               </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
             </div><hr>
             <h2>Section title</h2>
           </div>

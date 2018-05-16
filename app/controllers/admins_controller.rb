@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+    before_action :authenticate_member!
     #Links to my /admin route
     #links to a /views/admin/index.html.erb
     def index

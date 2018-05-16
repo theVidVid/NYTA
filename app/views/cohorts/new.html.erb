@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Students</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Students</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    </head>
     <body>
-        <h1>This is my create page for cohorts.</h1>
+        <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-3">
+            <a class="navbar-brand col-sm-3 col-md-2 mr-5" href="#">New York Tech Academy</a>
+            <input class="form-control form-control-dark w-25" type="text" placeholder="Search" aria-label="Search">
+            <ul class="navbar-nav px-5">
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="#">Sign out</a>
+                </li>
+            </ul>
+        </nav>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-info sidebar">
+          <div class="sidebar-sticky">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            </h6>
+            <div class="list-group">
+              <a href='/admins/1' class="list-group-item list-group-item-action active">
+                Home
+              </a>
+              <a href='/cohorts' class="list-group-item list-group-item-action list-group-item-info">Cohorts</a>
+              <a href='/courses' class="list-group-item list-group-item-action list-group-item-info">Courses</a>
+              <a href='/instructors' class="list-group-item list-group-item-action list-group-item-info">Instructors</a>
+              <a href='/students' class="list-group-item list-group-item-action list-group-item-info">Students</a>
+            </div>
+          </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <h1 class="h2 align-items-center">New Cohort Dashboard</h1>
+            <hr>
+            <div class="form-group"> 
+                <%= form_for @cohort, remote: true do |f| %> 
+                    <%= f.label :name %>  
+                    <%= f.text_field :name %> 
+                    <hr>  
+                    <%= f.label :start_date %>  
+                    <%= f.date_field :start_date %>
+                    <hr>
+                    <%= f.label :end_date %>  
+                    <%= f.date_field :end_date %>
+                    <hr>
+                    <%= f.label :course_id %>  
+                    <%= f.number_field :course_id %>
+                    <hr>
+                    <%= f.label :instructor_id %>  
+                    <%= f.number_field :instructor_id %>
+                    <hr>              
+                    <button type="submit" class="btn btn-sm btn-success"><%= f.submit %></button>
+                <% end %>
+                <hr>
+            </div>
+ <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">          
+           
+            <div class="btn-toolbar mb-2 mb-md-0">
+            </div>
+          </div>
 
-        
-        <%= form_for @cohort do |f| %>  
-            <%= f.label :name %>  
-            <%= f.text_field :name %>  
-            <%= f.label :start_date %>  
-            <%= f.date_field :start_date %>
-            <%= f.label :end_date %>  
-            <%= f.date_field :end_date %>
-            <%= f.label :course_id %>  
-            <%= f.number_field :course_id %> 
-            <%= f.label :instructor_id %>  
-            <%= f.number_field :instructor_id %>              
-            <%= f.submit %>
-        <% end %>
-
-          
+          <h2>Section title</h2>
+        </main>
+    </div>
+</div>  
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>     

@@ -1,10 +1,11 @@
 class SessionsController < ApplicationController
+  before_action :authenticate_member!
   def new
   end
   
   def create
-    Admin = admin.find_by(email: params[:session][:email].downcase)
-    if admin && admin.authenticate(params[:session][:password])
+    Member = member.find_by(email: params[:session][:email].downcase)
+    if member && member.authenticate(params[:session][:password])
       # Log the user in and redirect to the user's show page.
     else
       # Create an error message.

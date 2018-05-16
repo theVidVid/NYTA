@@ -1,5 +1,6 @@
 class InstructorsController < ApplicationController
-        #Links to my /instructors route
+    before_action :authenticate_member!
+    #Links to my /instructors route
     #links to a /views/instructors/index.html.erb
     def index
         @instructors = Instructor.all

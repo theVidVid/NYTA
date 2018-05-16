@@ -1,4 +1,5 @@
 class CohortsController < ApplicationController
+    before_action :authenticate_member!
     #Links to my /cohorts route
     #links to a /views/couhorts/index.html.erb
     def index

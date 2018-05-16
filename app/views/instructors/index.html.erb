@@ -46,17 +46,19 @@
                     <th scope="col">Education</th>
                     <th scope="col">Email</th>
                     <th scope="col">Salary</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <% @instructors.each do |instructor| %>
                 <tr>
                     <th scope="row"><%= instructor.first_name %></th>
-                    <td><%= instructor.last_name %></td>
-                    <td><%= instructor.age %></td>
-                    <td><%= instructor.education %></td>
-                    <td><%= instructor.email %></td>
-                    <td><%= instructor.salary %></td>
+                    <th><%= instructor.last_name %></th>
+                    <th><%= instructor.age %></th>
+                    <th><%= instructor.education %></th>
+                    <th><%= instructor.email %></th>
+                    <th><%= instructor.salary %></th>
+                    <th><a href="/instructors/<%= instructor.id %>/edit">Edit</a></th>
                 </tr>
                 <% end %>
             </tbody>
@@ -66,12 +68,7 @@
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <a href='/instructors/new'><button class="btn btn-sm btn-success">New Instructor</button></a>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
               </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
             </div>
           </div>
 

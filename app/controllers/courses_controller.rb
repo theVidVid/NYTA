@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+    before_action :authenticate_member!
     #Links to my /courses route
     #links to a /views/courses/index.html.erb
     def index
