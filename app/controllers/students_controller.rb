@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
-    before_action :authenticate_member!
+    before_action :authenticate_member!, :new_student_path, only: [:index, :create]
+    respond_to :html, :js
     #Links to my /students route
     #links to a /views/students/index.html.erb
     def index

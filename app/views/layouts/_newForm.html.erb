@@ -1,0 +1,24 @@
+            <div class="form-group"> 
+                <%= form_for @student, remote: true do |f| %> 
+                    <%= f.label :cohort_id %>  
+                    <%= f.number_field :cohort_id %>
+                    <hr>  
+                    <%= f.label :first_name %>  
+                    <%= f.text_field :first_name %>
+                    <hr>
+                    <%= f.label :last_name %>  
+                    <%= f.text_field :last_name %>
+                    <hr>
+                    <%= f.label :age %>  
+                    <%= f.number_field :age %>
+                    <hr> 
+                    <%= f.label :education %>  
+                    <%= f.text_field :education %>
+                    <hr>
+                    <%= f.label :email %> 
+                    <%= f.text_field :email %>
+                    <hr>               
+                    <button type="submit" class="btn btn-sm btn-success"><%= f.submit %></button>
+                <% end %>
+                <hr>
+            </div>
