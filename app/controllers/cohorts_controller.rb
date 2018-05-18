@@ -1,13 +1,10 @@
 class CohortsController < ApplicationController
     before_action :authenticate_member!
-    #Links to my /cohorts route
-    #links to a /views/couhorts/index.html.erb
+    
     def index
         @cohorts = Cohort.all
     end
 
-    #Links to my  /cohorts/:id route
-    #links to a views/cohorts/show.html.erb
     def show
         @cohort = Cohort.find(params[:id])
     end
