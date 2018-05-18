@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    Member = member.find_by(email: params[:session][:email].downcase)
+    @member = member.find_by(email: params[:session][:email].downcase)
     if member && member.authenticate(params[:session][:password])
       # Log the user in and redirect to the user's show page.
     else
