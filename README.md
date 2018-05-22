@@ -6,11 +6,17 @@ Things you may want to cover:
 
 # Built with:
 
-* Ruby 2.5.0
+* Ruby-on-Rails
 
-* System dependencies
+* PostgreSQL
 
-* Configuration
+# Demo Log-in:
+
+* Email: masteradministrator@nyta.com
+
+* Password: masteradmin
+
+# Basic Functionality
 
 * Database creation
 
