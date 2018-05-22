@@ -18,13 +18,16 @@ NYTA is a fictional admin panel for a Tech bootcamp that allows an administrativ
 
 * Password: masteradmin
 
+# Log-in page:
+
+
 # Basic Functionality
 
-* Database creation
+* Devise Gem establishes user_authentication. 
 
-* Database initialization
+* Admin User can create, edit and delete Courses, Cohorts, Instructors, and Students.
 
-* How to run the test suite
+* Admin can access a show
 
 * Services (job queues, cache servers, search engines, etc.)
 
