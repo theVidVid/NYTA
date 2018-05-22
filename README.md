@@ -1,11 +1,12 @@
-# README
+# NYTA Admin Panel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+NYTA is a fictional admin panel for a Tech bootcamp that allows an administrative user the ability to create/edit/delete Courses, Cohorts, Students, and Instructors.
 
 Things you may want to cover:
 
-* Ruby version
+# Built with:
+
+* Ruby 2.5.0
 
 * System dependencies
 
