@@ -20,8 +20,8 @@ NYTA is a fictional admin panel for a Tech bootcamp that allows an administrativ
 
 # Log-in page:
 ![image](https://user-images.githubusercontent.com/35820755/40382970-ad673442-5dcd-11e8-9360-bd8207b75f1e.png)
-
-# Basic Functionality
+# Students page:
+![image](https://user-images.githubusercontent.com/35820755/40382970-ad673442-5dcd-11e8-9360-bd8207b75f1e.png)
 
 * Devise Gem establishes user_authentication. 
 
