@@ -2,13 +2,15 @@
 
 NYTA is a fictional admin panel for a Tech bootcamp that allows an administrative user the ability to create/edit/delete Courses, Cohorts, Students, and Instructors.
 
-Things you may want to cover:
-
 # Built with:
 
 * Ruby-on-Rails
 
 * PostgreSQL
+
+# Website URL:
+
+* https://nyta-panel.herokuapp.com/members/sign_in
 
 # Demo Log-in:
 
